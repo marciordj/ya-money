@@ -1,5 +1,5 @@
-import fastify from 'fastify';
+import express from 'express';
 
-const app = fastify();
+const app = express();
 
 export default app;
