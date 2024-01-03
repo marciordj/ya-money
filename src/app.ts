@@ -1,7 +1,6 @@
 import fastify from 'fastify';
+import { appRoutes } from './http/routes';
 
 export const app = fastify();
 
-app.get('/', (request, reply) => {
-	reply.status(200).send('Hello');
-});
+app.register(appRoutes);
