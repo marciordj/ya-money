@@ -9,3 +9,6 @@ Content-Type: application/json
     "price": 50,
     "bank": "Nubank"
 }
+
+## List purchase
+GET {{apiurl}}/purchase

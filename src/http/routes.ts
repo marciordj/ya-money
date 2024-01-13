@@ -1,9 +1,8 @@
 import { FastifyInstance } from 'fastify';
-import { purchase } from './controller/purchase';
+import { purchase } from './controller/purchaseRegister';
+import { purchaseList } from './controller/purchaseList';
 
 export async function appRoutes(app: FastifyInstance){
-	app.get('/purchase', (request, reply) => {
-		reply.status(200).send({message: 'deu'});
-	});
+	app.get('/purchase', purchaseList);
 	app.post('/purchase', purchase);
 }

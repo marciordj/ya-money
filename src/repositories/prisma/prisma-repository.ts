@@ -9,4 +9,12 @@ export class PrismaPurchaseRepository implements PurchaseRepository {
 		});
 		return purchase;
 	}
+
+	async list() {
+		const purchase = await prisma.purchases.findMany();
+
+		console.log('aqui -->', purchase);
+
+		return purchase;
+	}
 }

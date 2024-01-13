@@ -16,4 +16,8 @@ export class Purchase {
 			bank
 		});
 	}
+
+	async list() {
+		return await this.purchaseRepository.list();
+	}
 }
