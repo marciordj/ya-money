@@ -14,4 +14,4 @@ if (_env.success === false) {
 	throw new Error('Invalid enviroment');
 }
 
-export const env = _env;
+export const env = _env.data;

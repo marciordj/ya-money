@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@prisma/client':
+    specifier: ^5.8.0
+    version: 5.8.0(prisma@5.8.0)
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -31,6 +34,9 @@ devDependencies:
   eslint-plugin-import:
     specifier: ^2.29.1
     version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)
+  prisma:
+    specifier: ^5.8.0
+    version: 5.8.0
   tsup:
     specifier: ^8.0.1
     version: 8.0.1(typescript@5.3.3)
@@ -403,6 +409,46 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@prisma/client@5.8.0(prisma@5.8.0):
+    resolution: {integrity: sha512-QxO6C4MaA/ysTIbC+EcAH1aX/YkpymhXtO6zPdk+FvA7+59tNibIYpd+7koPdViLg2iKES4ojsxWNUGNJaEcbA==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      prisma: 5.8.0
+    dev: false
+
+  /@prisma/debug@5.8.0:
+    resolution: {integrity: sha512-ZqPpkvbovu/kQJ1bvy57NO4dw97fpQGcbQSCtsqlwSE1UNKJP75R3BKxdznk8ZPMY+GJdMRetWNv4oAvSbWn8Q==}
+
+  /@prisma/engines-version@5.8.0-37.0a83d8541752d7582de2ebc1ece46519ce72a848:
+    resolution: {integrity: sha512-cXcoVweYbnv8xRfkWq9oj8BECOdzHUazrSpYCa0ehp5TNz4l5Spa8jbq/VROCTzj3ZncH5D9Q2TmySYTOUeKlw==}
+
+  /@prisma/engines@5.8.0:
+    resolution: {integrity: sha512-Qhqm9WWLujNEC13AuZlUO14SQ15tNLe5puaz+tOk7UqINqJ3PtqMmuSuzomiw2diGVqZ+HYiSQzlR3+pPucVHA==}
+    requiresBuild: true
+    dependencies:
+      '@prisma/debug': 5.8.0
+      '@prisma/engines-version': 5.8.0-37.0a83d8541752d7582de2ebc1ece46519ce72a848
+      '@prisma/fetch-engine': 5.8.0
+      '@prisma/get-platform': 5.8.0
+
+  /@prisma/fetch-engine@5.8.0:
+    resolution: {integrity: sha512-1CAuE+JoYsPNggMEn6qk0zos06Uc9bYZBJ0VBPHD6R7REL05614koAbOCmn52IaYz3nobb7f25hqW6AY7rLkIw==}
+    dependencies:
+      '@prisma/debug': 5.8.0
+      '@prisma/engines-version': 5.8.0-37.0a83d8541752d7582de2ebc1ece46519ce72a848
+      '@prisma/get-platform': 5.8.0
+
+  /@prisma/get-platform@5.8.0:
+    resolution: {integrity: sha512-Nk3rhTFZ1LYkFZJnpSvQcLPCaBWgJQfteHII6UEENOOkYlmP0k3FuswND54tzzEr4qs39wOdV9pbXKX9U2lv7A==}
+    dependencies:
+      '@prisma/debug': 5.8.0
 
   /@rollup/rollup-android-arm-eabi@4.9.2:
     resolution: {integrity: sha512-RKzxFxBHq9ysZ83fn8Iduv3A283K7zPPYuhL/z9CQuyFrjwpErJx0h4aeb/bnJ+q29GRLgJpY66ceQ/Wcsn3wA==}
@@ -2234,6 +2280,14 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: true
+
+  /prisma@5.8.0:
+    resolution: {integrity: sha512-hDKoEqPt2qEUTH5yGO3l27CBnPtwvte0CGMKrpCr9+/A919JghfqJ3qgCGgMbOwdkXUOzdho0RH9tyUF3UhpMw==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.8.0
 
   /process-warning@2.3.2:
     resolution: {integrity: sha512-n9wh8tvBe5sFmsqlg+XQhaQLumwpqoAUruLwjCopgTmUBjJ/fjtBsJzKleCaIGBOMXYEhp1YfKl4d7rJ5ZKJGA==}
