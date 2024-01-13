@@ -7,9 +7,7 @@ export async function purchaseList(request: FastifyRequest, reply: FastifyReply)
 		const listPurchaseRepository = new PrismaPurchaseRepository();
 		const listPurchase = new Purchase(listPurchaseRepository);
 
-		return reply.status(200).send({
-			listPurchase
-		});
+		return reply.status(200).send(await listPurchase.list());
 	} catch(err) {
 		return reply.status(400).send({ err });
 	}
