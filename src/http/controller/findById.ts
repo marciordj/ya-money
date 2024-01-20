@@ -2,7 +2,13 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 import { PurchaseRepository } from '../../repositories/purchase-repository';
 import { Purchase } from '../../service/purchase';
 
-export async function findPurchaseById(request: FastifyRequest, reply: FastifyReply) {
+type RequestType = FastifyRequest<{
+	Params: {
+		id: string
+	}
+}>
+
+export async function findPurchaseById(request: RequestType, reply: FastifyReply) {
 	try {
 		const purchaseRepository = new PurchaseRepository();
 		const purchaseService = new Purchase(purchaseRepository);
