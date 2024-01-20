@@ -1,10 +1,10 @@
-import { PrismaPurchaseRepository } from '../../repositories/prisma/prisma-repository';
+import { PurchaseRepository } from '../../repositories/purchase-repository';
 import { Purchase } from '../../service/purchase';
 import { FastifyReply, FastifyRequest } from 'fastify';
 
 export async function purchaseList(request: FastifyRequest, reply: FastifyReply) {
 	try {
-		const listPurchaseRepository = new PrismaPurchaseRepository();
+		const listPurchaseRepository = new PurchaseRepository();
 		const listPurchase = new Purchase(listPurchaseRepository);
 
 		return reply.status(200).send(await listPurchase.list());

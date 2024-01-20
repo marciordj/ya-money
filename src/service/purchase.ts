@@ -1,6 +1,6 @@
 import { PurchaseRepository } from '../repositories/purchase-repository';
 
-interface PurchaseService {
+interface IPurchaseService {
 	location: string;
 	price: number;
 	bank: string
@@ -9,7 +9,7 @@ interface PurchaseService {
 export class Purchase {
 	constructor(private purchaseRepository: PurchaseRepository){}
 
-	async execute({ location, price, bank }: PurchaseService) {
+	async execute({ location, price, bank }: IPurchaseService) {
 		await this.purchaseRepository.create({
 			location,
 			price,
@@ -19,5 +19,10 @@ export class Purchase {
 
 	async list() {
 		return await this.purchaseRepository.list();
+	}
+
+	async findById(id: string) {
+		console.log('service -->', id);
+		return await this.purchaseRepository.findById(id);
 	}
 }
