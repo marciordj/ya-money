@@ -1,6 +1,5 @@
-import fastify from 'fastify';
-import { appRoutes } from './http/routes';
+import { fastify } from "./libs/index.ts";
 
-export const app = fastify();
+export const app = fastify.fastify();
 
-app.register(appRoutes);
+app.get('/', () => 'Hello worldsadasd');

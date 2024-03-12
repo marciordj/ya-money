@@ -1,9 +1,8 @@
-import { app } from './app';
-import { env } from './env/index';
+import { app } from './app.ts';
 
 app.listen({
 	host: '0.0.0.0',
-	port: env.PORT
+	port: 3000
 }).then(() => {
-	console.log(`Server running on ${env.PORT}`);
+	console.log('Server running');
 });
