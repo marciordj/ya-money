@@ -1,6 +1,6 @@
 import { PurchaseRepository } from '../repositories/purchase-repository';
 
-interface IPurchaseService {
+type IPurchaseService = {
 	location: string;
 	price: number;
 	bank: string
@@ -22,7 +22,6 @@ export class Purchase {
 	}
 
 	async findById(id: string) {
-		console.log('service -->', id);
 		return await this.purchaseRepository.findById(id);
 	}
 }
