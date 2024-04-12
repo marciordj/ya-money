@@ -50,17 +50,37 @@ export type Payment = {
 export default function Home() {
   
   return (
-    <div className="rounded-md border">
+    <div className="mt-28 rounded-md border">
       <Table>
         <TableHeader className="text-slate-100">
-          123
+          <TableHead>
+            Lugar
+          </TableHead>
+          <TableHead>
+            Preço
+          </TableHead>
+          <TableHead>
+            Banco
+          </TableHead>
+          <TableHead>
+            Data
+          </TableHead>
         </TableHeader>
         <TableBody>
-        <TableRow>
-              <TableCell className="h-24 text-center text-slate-100">
-                No results.
-              </TableCell>
-            </TableRow>
+          <TableRow className="text-slate-100">
+            <TableCell>
+              Shopping
+            </TableCell>
+            <TableCell>
+              R$ 123,00
+            </TableCell>
+            <TableCell>
+              Bradesco
+            </TableCell>
+            <TableCell>
+              13/04/2023
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </div>
