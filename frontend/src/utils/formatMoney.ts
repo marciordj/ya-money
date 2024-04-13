@@ -1,6 +1,8 @@
 export function formatMoney(amount: number) {
-  // const parseAmountToString = String(amount);
-  // const formatValue = parseAmountToString.replace('.', ',')
+  const valueParsed = Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(amount)
 
-  return `R$ ${amount}`
+  return valueParsed
 }

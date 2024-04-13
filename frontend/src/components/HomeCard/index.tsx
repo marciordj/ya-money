@@ -1,5 +1,5 @@
 import { formatMoney } from "@/utils/formatMoney";
-import { Card, CardContent, CardHeader } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 type prop = {
   title: string,

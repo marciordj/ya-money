@@ -8,7 +8,7 @@ export default function Home() {
         <HomeCard title="Entrada" value={4000} />
         <HomeCard title="Saidas" value={3000} />
       </div>
-      <div className="mt-28 rounded-md border">
+      <div className="mt-16 rounded-md border">
         <ExpenseTable />
       </div>
     </>
