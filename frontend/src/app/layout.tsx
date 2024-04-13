@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="bg-slate-950 min-h-screen grid grid-cols-app">
           <SideBar />
-          <main className="max-w-4xl mx-auto">
+          <main className="px-8">
             {children}
           </main>
         </div>
