@@ -1,12 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View } from 'react-native';
-import { Text } from 'react-native-paper';
 import Header from '../../Components/Header';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Surface } from 'react-native-paper';
-import { FontAwesome } from '@expo/vector-icons';
 import Moneycard from '../../Components/MoneyCard';
+import ExpenseList from '../../Components/ExpenseList';
 
 export default function Home() {
   return (
@@ -16,6 +12,7 @@ export default function Home() {
         <Moneycard type='income' />
         <Moneycard type='expense' />
       </View>
+      <ExpenseList />
     </View>
   );
 }
