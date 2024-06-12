@@ -1,4 +1,4 @@
-import { PurchaseRepository } from "../repositories/purchase-repository";
+import { PurchaseRepository } from '../repositories/purchase-repository';
 
 export class ListExpenseUseCase {
 	constructor(private purchaseRepository: PurchaseRepository) { }
