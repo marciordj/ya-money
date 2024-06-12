@@ -1,7 +1,7 @@
-import { Prisma } from '@prisma/client';
+import { Prisma, Purchases } from '@prisma/client';
 
 export interface PurchaseRepository {
-	create(data: Prisma.PurchasesCreateInput): Promise<any>
-	list(): Promise<any>
-	findById(id: string): Promise<any>
+	create(data: Prisma.PurchasesCreateInput): Promise<Purchases>
+	list(): Promise<Purchases[]>
+	findById(id: string): Promise<Purchases | null>
 }
