@@ -1,7 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';
-import { PurchaseRepository } from '../../repositories/purchase-repository';
-import { Purchase } from '../../service/purchase';
+import { makeExpense } from '../../use-case/factory/makeExpense';
 
 export async function purchase(request: FastifyRequest, reply: FastifyReply) {
 	const registerBodySchema = z.object({
@@ -13,10 +12,9 @@ export async function purchase(request: FastifyRequest, reply: FastifyReply) {
 	const { location, price, bank } = registerBodySchema.parse(request.body);
 
 	try {
-		const prismaPurchaseRepository = new PurchaseRepository();
-		const purchaseService = new Purchase(prismaPurchaseRepository);
+		const createExpenseUseCase = makeExpense();
 
-		await purchaseService.execute({
+		await createExpenseUseCase.execute({
 			location,
 			price,
 			bank
